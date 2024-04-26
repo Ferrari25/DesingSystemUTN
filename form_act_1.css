@@ -29,7 +29,7 @@ form label {
 }
 
 form input[type="text"] {
-  width: 100%;
+  width: 90%;
   padding: 15px;
   margin-bottom: 20px;
   border-radius: 4px;
@@ -62,4 +62,33 @@ form input[type="text"]:focus {
 
 .button-group .button-send:hover {
   background-color: #408344; /* Cambia este color según tus preferencias */
+}
+
+.button-group .button-addroom {
+  padding: 10px 20px;
+  border: none;
+  background-color: #7988df; /* Cambia este color según tus preferencias */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.button-group .button-addroom:hover {
+  background-color: #5466ec; /* Cambia este color según tus preferencias */
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-column {
+  flex: 1;
+  padding: 0 10px;
 }

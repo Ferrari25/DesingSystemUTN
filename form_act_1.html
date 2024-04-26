@@ -25,59 +25,97 @@ el servicio de pintura de casas.
 
             <div class="input-group">
                 <div class="input-box">
-                    <p>Informacion Personal</p>
+                    <p><u>Informacion personal</u></p>
                     <label>Nombre</label>
-                    <input type="text" placeholder="John Doe">
-                
-                
+                    <input type="text" placeholder="Samuel DeLuque">
                     <label>Correo Electronico</label>
                     <input type="text" placeholder="example@mail.com">
-                
-                
-
-                
-                    <label>Contacto</label>
+                    <label>Telefono / Celular </label>
                     <input type="text" placeholder="+54 9 1126354897">
-                
 
-                
-                    <p>Ubicacion</p>
-                    <label>Direccion</label>
-                    <input type="text" placeholder="+54 9 1126354897">
-               
-
-                
-                    <label>Codigo Postal</label>
-                    <input type="text" placeholder="+54 9 1126354897">
-                
-
-                
+                    <p><u>  Ubicación  </u></p>
                     <label>Provincia</label>
-                    <input type="text" placeholder="+54 9 1126354897">
+                    <input type="text" placeholder="Buenos Aires">
+                    <label>Direccion</label>
+                    <input type="text" placeholder="san martin 504, campana">
                 
+                    <div class="input-row">
+                        <div class="input-column">
+                            <label>Depto</label>
+                            <input type="text" placeholder="0">
+                        </div>
+                        <div class="input-column">
+                            <label>Piso </label>
+                            <input type="text" placeholder="0">
+                        </div>
+                        <div class="input-column">
+                            <label>Codigo Postal</label>
+                            <input type="text" placeholder="1625">
+                        </div>
+                    </div>
+                    <div id="dimensiones">
+                        <p><u>Dimensiones y Pintura</u></p>
+                        <div class="input-row">
 
-                
-                    <label>Depto | Piso </label>
-                    <input type="text" placeholder="+54 9 1126354897">
-                
+                            <div class="input-column">
+                                <label>Alto [Metros]</label>
+                                <input type="text" placeholder="3">
+                            </div>
 
-                
-                    <p>Dimensiones</p>
-                    
-                    <label>Alto</label>
-                    <input type="text" placeholder="123">
-                    <label>Ancho</label>
-                    <input type="text" placeholder="123">
+                            <div class="input-column">
+                                <label>Ancho [Metros]</label>
+                                <input type="text" placeholder="8">
+                            </div>
+
+                            <div class="input-column">
+                                <label>Color de pintura</label>
+                                <input type="text" placeholder="Beige">
+                            </div>
+
+                            <div class="input-column">
+                                <label>Calidad</label>
+                                <input type="text" placeholder="Estandar">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
 
             <div class="button-group">
+                <button class="button-addroom" id="agregar-ambiente">Agregar ambiente</button>
                 <button class="button-send" type="#" >Enviar</button>
             </div>
         </form>
-        <script src="funcionality.js">
+        <script>
+            document.getElementById('agregar-ambiente').addEventListener('click', function() {
+                var Div_dimensiones = document.getElementById('dimensiones');
+                var newRow = document.createElement('div');
+                newRow.className = 'input-row';
+                newRow.innerHTML = `
+                <div class="input-column">
+                    <label>Alto [Metros]</label>
+                    <input type="text" placeholder="3">
+                </div>
 
+                <div class="input-column">
+                    <label>Ancho [Metros]</label>
+                    <input type="text" placeholder="8">
+                </div>
+
+                <div class="input-column">
+                    <label>Color de pintura</label>
+                    <input type="text" placeholder="Beige">
+                </div>
+
+                <div class="input-column">
+                    <label>Calidad</label>
+                    <input type="text" placeholder="Estandar">
+                </div>
+                `;
+              
+                Div_dimensiones.appendChild(newRow);
+              });
         </script>
     </body>
 </html>

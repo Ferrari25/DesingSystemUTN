@@ -4,3 +4,4 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
   // Aquí va tu código para enviar el formulario
   this.reset();
 });
+
