@@ -21,11 +21,11 @@ el servicio de pintura de casas.
     <body>
         <section class="container"></section>
         <form action="#" class="form">
-            <h1>Paint Your House</h1>
+            <h1>Pinta tu Casa ! </h1>
 
             <div class="input-group">
                 <div class="input-box">
-                    <p><u>Informacion personal</u></p>
+                    <h4><u>INFORMACION PERSONAL</u></h4>
                     <label>Nombre</label>
                     <input type="text" placeholder="Samuel DeLuque">
                     <label>Correo Electronico</label>
@@ -33,7 +33,7 @@ el servicio de pintura de casas.
                     <label>Telefono / Celular </label>
                     <input type="text" placeholder="+54 9 1126354897">
 
-                    <p><u>  Ubicación  </u></p>
+                    <h4><u>  UBICACION  </u></h4>
                     <label>Provincia</label>
                     <input type="text" placeholder="Buenos Aires">
                     <label>Direccion</label>
@@ -54,16 +54,16 @@ el servicio de pintura de casas.
                         </div>
                     </div>
                     <div id="dimensiones">
-                        <p><u>Dimensiones y Pintura</u></p>
+                        <h4><u>DIMENSIONES Y PINTURA</u></h4>
                         <div class="input-row">
 
                             <div class="input-column">
-                                <label>Alto [Metros]</label>
+                                <label>Alto [ Metros ]</label>
                                 <input type="text" placeholder="3">
                             </div>
 
                             <div class="input-column">
-                                <label>Ancho [Metros]</label>
+                                <label>Ancho [ Metros ]</label>
                                 <input type="text" placeholder="8">
                             </div>
 
@@ -78,9 +78,11 @@ el servicio de pintura de casas.
                             </div>
                         </div>
                     </div>
+                    <input type="checkbox"  name="fav_language" value="">
+                    <label for="fav_language">Acepto Terminos y Coindiciones</label><br>
                 </div>
             </div>
-
+            
 
             <div class="button-group">
                 <button class="button-addroom" id="agregar-ambiente">Agregar ambiente</button>
@@ -94,12 +96,12 @@ el servicio de pintura de casas.
                 newRow.className = 'input-row';
                 newRow.innerHTML = `
                 <div class="input-column">
-                    <label>Alto [Metros]</label>
+                    <label>Alto [ Metros ]</label>
                     <input type="text" placeholder="3">
                 </div>
 
                 <div class="input-column">
-                    <label>Ancho [Metros]</label>
+                    <label>Ancho [ Metros ]</label>
                     <input type="text" placeholder="8">
                 </div>
 
