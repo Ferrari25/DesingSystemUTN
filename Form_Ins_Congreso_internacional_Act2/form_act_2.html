@@ -1,0 +1,96 @@
+<! -
+Ejercicio 2
+Diseñar un formulario que permita la inscripción a un Congreso internacional presencial donde se debe pagar la entrada. 
+El mismo debe permitir también la inscripción de expositores con la particularidad de que no debe pagar, en su lugar debe subir un archivocon el trabajo a presentar.
+● Pago exclusivo por Mercado Pago.
+● Al completar el formulario se enviará un correo electrónico con la información.
+● Es requerido el número de documento
+para evitar que se inscriban 2 veces.
+->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="form_act_2.css">
+    <link rel="icon" type="image/x-icon" href="paint_house.png">
+    <title>Inscripción Congreso internacional</title>
+</head>
+    <body>
+        <section class="container"></section>
+        <form action="#" class="form">
+            <h1>Inscripción Congreso</h1>
+            <img id="myImage" style="display: none;" />
+            <div class="input-group">
+                <div class="input-box">
+                    <label>Nombre</label>
+                    <input type="text" placeholder="John" >
+                </div>
+
+                <div class="input-box">
+                    <label>Apellido</label>
+                    <input type="text" placeholder="Doe" >
+                </div>
+
+                <div class="input-box">
+                    <label>Número de Identificación</label>
+                    <input type="text" placeholder="35.419.876" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Email</label>
+                    <input type="text" placeholder="example@gmail.com" >
+                </div>
+
+                <div class="input-box">
+                    <label>Contacto</label>
+                    <input type="text" placeholder="+54 9 1126354897" >
+                </div>
+                
+                <div class="input-box">
+                    <label>Institución</label>
+                    <input type="text" placeholder="Universidad Tecnologica Delta">
+                </div>
+
+                <input type="checkbox"  name="fav_language" value="">
+                <label for="fav_language">Expositor</label><br>
+                <input type="file" />
+            </div>
+
+            
+
+            <div class="button-group">
+                <button class="button-pay" type="submit" id="checkboxId"><img src="iconMP.png">Pagar</button>
+                <button class="button-send" type="submit">Enviar</button>
+            </div>
+
+            
+
+            
+        </form>
+        <script>
+
+            var checkbox = document.querySelector('input[name="fav_language"]');
+            var buttonPay = document.querySelector('.button-pay');
+            var buttonSend = document.querySelector('.button-send'); 
+            var fileInput = document.querySelector('input[type="file"]'); 
+            
+            fileInput.style.display = 'none';
+
+            checkbox.addEventListener('change', function() {
+                if(this.checked) {
+                    buttonPay.style.display = 'none';
+                    fileInput.style.display = '';
+                } else if (!this.checked){
+                    buttonPay.style.display = ''; 
+                    fileInput.style.display = 'none';
+                }
+            });
+
+           
+
+        </script>
+    </body>
+</html>

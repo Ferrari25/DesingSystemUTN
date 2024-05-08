@@ -1,0 +1,88 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #96A4CD;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 700px;
+  margin: 0 auto;
+}
+h1{
+  color:   rgb(54, 54, 56);
+  font-size: 30px;
+  margin-bottom: 20px;
+text-align: center;
+}
+body{
+  background-color: #2B3F7C;
+}
+
+form label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(54, 54, 56);
+  margin-bottom: 10px;
+}
+
+form input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+
+}
+
+
+form input[type="text"]:focus {
+  outline: none; /* Elimina el borde o resplandor predeterminado */
+  border: 1px solid #020202; /* Aplica un borde verde */
+}
+
+form input[type="file"] {
+  padding: 5px 5px;
+}
+
+
+.button-pay{
+  padding: 10px 20px 10px 5px;
+  border: none;
+  background-color: #29b4ff; 
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  margin: 4px 2px;
+  border-radius: 4px;
+
+}
+
+.button-pay img {
+  width: 25px;  
+  height: 25px;
+  margin-right: 5px; 
+  vertical-align: middle; 
+  float: left; 
+}
+
+.button-send {
+  padding: 10px 20px 10px 20px;
+  border: none;
+  background-color: #4CAF50; 
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  margin: 4px 2px;
+  border-radius: 4px;
+}
+
+.button-send:hover {
+  background-color: #408344; 
+}
+
+.button-pay:hover {
+  background-color: #0A6BC9; 
+}
+
