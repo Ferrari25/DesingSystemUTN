@@ -1,0 +1,124 @@
+<! -
+Ejercicio 1
+Diseñar un formulario que permita la carga de
+los datos de un usuario interesado en solicitar
+el servicio de pintura de casas.
+● Contacto
+● Ubicación del inmueble
+● Dimensiones
+->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="form_act_1.css">
+    <link rel="icon" type="image/x-icon" href="paint_house.png">
+    <title>Formulario Servicio de Pintura</title>
+</head>
+    <body>
+        <section class="container"></section>
+        <form action="#" class="form">
+            <h1>Pinta tu Casa ! </h1>
+
+            <div class="input-group">
+                <div class="input-box">
+                    <h4><u>INFORMACION PERSONAL</u></h4>
+                    <label>Nombre</label>
+                    <input type="text" placeholder="Samuel DeLuque">
+                    <label>Correo Electronico</label>
+                    <input type="text" placeholder="example@mail.com">
+                    <label>Telefono / Celular </label>
+                    <input type="text" placeholder="+54 9 1126354897">
+
+                    <h4><u>  UBICACION  </u></h4>
+                    <label>Provincia</label>
+                    <input type="text" placeholder="Buenos Aires">
+                    <label>Direccion</label>
+                    <input type="text" placeholder="san martin 504, campana">
+                    
+                    <div class="input-row">
+                        <div class="input-column">
+                            <label>Depto</label>
+                            <input type="text" placeholder="0">
+                        </div>
+                        <div class="input-column">
+                            <label>Piso </label>
+                            <input type="text" placeholder="0">
+                        </div>
+                        <div class="input-column">
+                            <label>Codigo Postal</label>
+                            <input type="text" placeholder="1625">
+                        </div>
+                    </div>
+
+                    <div id="dimensiones">
+                        <h4><u>DIMENSIONES Y PINTURA</u></h4>
+                        <div class="input-row">
+
+                            <div class="input-column">
+                                <label>Alto [ Metros ]</label>
+                                <input type="text" placeholder="3">
+                            </div>
+
+                            <div class="input-column">
+                                <label>Ancho [ Metros ]</label>
+                                <input type="text" placeholder="8">
+                            </div>
+
+                            <div class="input-column">
+                                <label>Color de pintura</label>
+                                <input type="text" placeholder="Beige">
+                            </div>
+                            
+                            <div class="input-column">
+                                <label>Calidad</label>
+                                <input type="text" placeholder="Estandar">
+                            </div>
+                        </div>
+                    </div>
+                    <input type="checkbox"  name="fav_language" value="">
+                    <label for="fav_language">Acepto Terminos y Coindiciones</label><br>
+                </div>
+            </div>
+            
+
+            <div class="button-group">
+                <button class="button-addroom" id="agregar-ambiente">Agregar ambiente</button>
+                <button class="button-send" type="#" >Enviar</button>
+            </div>
+        </form>
+        <script>
+            document.getElementById('agregar-ambiente').addEventListener('click', function() {
+                var Div_dimensiones = document.getElementById('dimensiones');
+                var newRow = document.createElement('div');
+                newRow.className = 'input-row';
+                newRow.innerHTML = `
+                <div class="input-column">
+                    <label>Alto [ Metros ]</label>
+                    <input type="text" placeholder="3">
+                </div>
+
+                <div class="input-column">
+                    <label>Ancho [ Metros ]</label>
+                    <input type="text" placeholder="8">
+                </div>
+
+                <div class="input-column">
+                    <label>Color de pintura</label>
+                    <input type="text" placeholder="Beige">
+                </div>
+
+                <div class="input-column">
+                    <label>Calidad</label>
+                    <input type="text" placeholder="Estandar">
+                </div>
+                `;
+              
+                Div_dimensiones.appendChild(newRow);
+              });
+        </script>
+    </body>
+</html>
